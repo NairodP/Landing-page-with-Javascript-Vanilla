@@ -1,7 +1,3 @@
-function toggleNav() {
-  const nav = document.getElementById("myTopnav");
-  nav.className = nav.className === "topnav" ? "topnav responsive" : "topnav";
-}
 
 // DOM Elements
 const modalbg = document.querySelector(".bground");
@@ -21,6 +17,25 @@ const quantityElement = quantity.parentNode;
 const radioButtons = document.querySelectorAll('input[type="radio"]');
 const termsCheckbox = document.getElementById("checkbox1");
 const containerConfirmation = document.querySelector(".container-confirmation");
+
+// Nav
+const hamburgerButton = document.querySelector(".nav-toggler");
+const navigation = document.querySelector("nav");
+const mobNav = document.querySelector(".mobile-nav");
+
+hamburgerButton.addEventListener("click", toggleNav);
+
+function toggleNav() {
+  hamburgerButton.classList.toggle("active");
+  navigation.classList.toggle("active");
+
+  // if (navigation.classList == "active") {
+  //   mobNav.style.position = "fixed";
+  // }
+  // else {
+  //   mobNav.style.position = "absolute";
+  // }
+}
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -367,4 +382,3 @@ form.addEventListener("submit", function (event) {
     submitForm.addEventListener("click", closeModal);
   }
 });
-
