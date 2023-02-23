@@ -693,7 +693,7 @@ footer {
 
   .hero-content {
     padding: 0;
-    min-width: none;
+    min-width: 0;
   }
   .hero-headline {
     font-size: 2.5rem;
@@ -731,10 +731,6 @@ footer {
     line-height: 1.7;
   }
   p.hero-text {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    text-align: start;
     font-size: 0.7rem;
     flex-wrap: wrap;
     line-height: 1.7;
